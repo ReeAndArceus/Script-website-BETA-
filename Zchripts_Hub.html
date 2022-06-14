@@ -1,0 +1,29 @@
+<html>
+
+<h6>
+<p> Welcome To Scripts Hub. </p>
+<a href="https://discord.gg/xyPZ3WnJrQ">A Mystery Link..</a>
+
+
+
+
+<strong> SCRIPTS </strong>
+<p> Script 1(Sing Any Song On Chat Script) : local song = "Song Name Here"
+
+request = game:HttpGet("https://lyrics.flc.bar/search?song=SONG NAME HERE")
+
+decoded = game.HttpService:JSONDecode(request)
+
+local lyrics = {}
+for i in decoded.lyrics:gmatch("[^\r\n]+") do
+   table.insert(lyrics, i)
+end
+
+for i, v in pairs(lyrics) do
+   wait(3)
+   game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(v, "All")
+end </p>
+</h6>
+
+<p> Website Updates Every week.</p>
+</html>
